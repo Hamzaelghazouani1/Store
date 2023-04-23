@@ -1,0 +1,50 @@
+<div class="header-container">
+  <header class="relative">
+    <p class="flex h-10 items-center justify-center dark:bg-gray-900 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">Get free delivery on orders over $100</p>
+
+    <nav aria-label="Top" class="mx-auto px-2">
+      <div class="border-b border-gray-200">
+        <div class="flex h-16 items-center px-4">
+          <button type="button" class="rounded-md bg-white p-2 text-gray-400 lg:hidden">
+            <span class="sr-only">Open menu</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+
+          <div class="ml-4 flex lg:ml-0">
+            <a href="#">
+              <span class="sr-only">Your Company</span>
+              <img class="h-8 w-auto" src="https://static.vecteezy.com/system/resources/previews/016/016/817/non_2x/ecommerce-logo-free-png.png?color=indigo&shade=600" alt="">
+            </a>
+          </div>
+
+          <div class="navBar">
+              <a href="#" class=" nav-item" routerLink="/"><i class="ri-home-3-line"></i> Home</a>
+              <a href="#" class="nav-item"  routerLink="/product"><i class="ri-store-2-line"></i> Product</a>
+          </div>
+
+          <div class="ml-auto flex items-center">
+            <div class="search-container">
+              <input type="text" placeholder="Search ..." [(ngModel)]="searchValue">
+              <i class="ri-search-2-line"  (click)="searchAction()"></i>
+            </div>
+
+            <div class="ml-4 flow-root lg:ml-6">
+              <a class="group -m-2 flex items-center p-2" routerLink="/">
+                <i class="ri-heart-line favorite"></i>
+              </a>
+            </div>
+
+            <div class="ml-4 flow-root lg:ml-6">
+              <a class="group -m-2 flex items-center p-2" routerLink="/profile">
+                <i class="ri-user-6-fill user"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+</div>
