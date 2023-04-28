@@ -1,0 +1,16 @@
+.item-container{
+  width: 300px;
+  height: 500px;
+  margin: 16px;
+
+  background-color: rgba(199, 203, 207, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border: none;
+  color: black;
+}
+
+.img{
+  width: 250px;
+  height: 300px;
+  overflow: hidden;
+}
