@@ -20,8 +20,8 @@
           </div>
 
           <div class="navBar">
-              <a href="#" class=" nav-item" routerLink="/"><i class="ri-home-3-line"></i> Home</a>
-              <a href="#" class="nav-item"  routerLink="/product"><i class="ri-store-2-line"></i> Product</a>
+              <a class="nav-item" (click)="navigateAction('/')"><i class="ri-home-3-line"></i> Home</a>
+              <a class="nav-item" (click)="navigateAction('/product')" ><i class="ri-store-2-line"></i> Product</a>
           </div>
 
           <div class="ml-auto flex items-center">
