@@ -17,8 +17,8 @@
         "SWIFT VISUALS – The Strix G16 has a fast FHD 165Hz panel to make sure you never miss a moment. It also covers 100% of the sRGB color space and feature Dolby Vision, Adaptive-Sync support, and an 90% screen-to-body ratio for a stellar gaming and viewing experience.",
         "MUX SWITCH WITH ADVANCED OPTIMUS - A MUX Switch increases laptop gaming performance by 5-10% by routing frames directly from the dGPU to the display bypassing the iGPU. With Advanced Optimus the switch between iGPU and dGPU becomes automatic based on the task, optimizing battery life."
       ],
+      "color":["#1d5e00"],
       "detail":[
-        {"description":"Color","value":["#1d5e00"]},
         {"description":"Brand","value":"ASUS"},
         {"description":"Series","value":"ROG Strix G16"},
         {"description":"Screen Size","value":"16 Inches"},

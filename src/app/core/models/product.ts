@@ -6,6 +6,7 @@ export interface Product {
   img: Img
   desc: string
   about: string[]
+  color:string[]
   detail: Detail[]
 }
 
@@ -16,5 +17,5 @@ export interface Img {
 
 export interface Detail {
   description: string
-  value: string | string[]
+  value: string
 }
