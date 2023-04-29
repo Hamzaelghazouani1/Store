@@ -7,6 +7,7 @@ import { FooterPublicComponent } from './components/footer-public/footer-public.
 import { CoreModule } from '../core/module/core.module';
 import { CardComponent } from './components/card/card.component';
 import { MoreTextPipe } from './pipe/more-text.pipe';
+import { DetailsComponent } from './components/details/details.component';
 
 
 
@@ -17,7 +18,7 @@ import { MoreTextPipe } from './pipe/more-text.pipe';
   ],
   declarations: [
     CardComponent,
-    MoreTextPipe
+    MoreTextPipe,
   ]
 })
 export class SharedModule { }
