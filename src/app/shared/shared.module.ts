@@ -13,11 +13,9 @@ import { DetailsComponent } from './components/details/details.component';
 
 @NgModule({
   exports:[
-    CardComponent,
     MoreTextPipe
   ],
   declarations: [
-    CardComponent,
     MoreTextPipe,
   ]
 })

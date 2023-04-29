@@ -11,7 +11,7 @@ const routes: Routes = [
   {path:'',component:PublicComponent,children:[
     {path:'',component:HomeComponent},
     {path:'product',component:AllProductComponent},
-    {path:'detail',component:DetailsComponent},
+    {path:'product/:id',component:DetailsComponent},
     {path:'login',component:LoginComponent},
   ]},
   {path:'**',component:NotFoundComponent,pathMatch:"prefix"}

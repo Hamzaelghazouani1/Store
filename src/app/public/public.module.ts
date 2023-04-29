@@ -10,6 +10,7 @@ import { HeaderPublicComponent } from '../shared/components/header-public/header
 import { FooterPublicComponent } from '../shared/components/footer-public/footer-public.component';
 import { LoginComponent } from './components/login/login.component';
 import { DetailsComponent } from '../shared/components/details/details.component';
+import { CardComponent } from '../shared/components/card/card.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DetailsComponent } from '../shared/components/details/details.component
     HeaderPublicComponent,
     FooterPublicComponent,
     LoginComponent,
-    DetailsComponent
+    DetailsComponent,
+    CardComponent,
   ],
   imports: [
     SharedModule,

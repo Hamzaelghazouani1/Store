@@ -1,8 +1,20 @@
 export interface Product {
-  "id":number;
-  "name":string;
-  "price":number;
-  "description":string;
-  "image":string;
-  "rating":number;
+  id: number
+  name: string
+  price: number
+  rating: number
+  img: Img
+  desc: string
+  about: string[]
+  detail: Detail[]
+}
+
+export interface Img {
+  base_img: string
+  img: string
+}
+
+export interface Detail {
+  description: string
+  value: string | string[]
 }
