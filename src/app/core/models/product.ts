@@ -5,6 +5,7 @@ export interface Product {
   rating: number
   img: Img
   desc: string
+  qte: string
   about: string[]
   color:string[]
   detail: Detail[]

@@ -48,3 +48,20 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
     ...
     |--api_server.json
 ```
+
+## Route existe :
+
+```ts
+
+Base URL : http://localhost:4200
+public : 
+    /
+    /product
+    /product/:id
+    /login  
+
+Dashboard :
+    /admin
+    /admin/product
+    /admin/preview/:id
+```

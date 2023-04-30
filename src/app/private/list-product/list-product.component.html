@@ -1,12 +1,17 @@
 <div class="container">
       <div class="bg-white p-4 shadow-lg rounded-lg">
+        <div class="flex flex-row justify-between align-center">
           <h1 class="font-bold text-base">Table</h1>
+          <button (click)="openDialogAdd()" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-1 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 btn">+ submit</button>
+        </div>
           <div class="mt-4">
             <div
                 class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg bg-white">
                 <table class="table">
-                  <app-head-table></app-head-table>
-                  <app-item-table></app-item-table>
+                  <app-head-table ></app-head-table>
+                  <div class="container-tbaod" *ngFor="let product of allProduct">
+                    <app-item-table [product]="product"></app-item-table>
+                  </div>
                 </table>
             </div>
           </div>

@@ -9,6 +9,7 @@ export class DataStorageService {
   constructor() { }
 
   data!:Product[];
-  dataProduct!:Product;
+  dataProduct:Product|undefined;
+  id:any;
 
 }

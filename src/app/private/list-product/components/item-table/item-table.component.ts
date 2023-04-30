@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { DataStorageService } from 'src/app/core/data/data-storage.service';
+import { Product } from 'src/app/core/models/product';
+import { ProductService } from 'src/app/core/services/product.service';
 import { PopUpComponent } from 'src/app/shared/components/pop-up/pop-up.component';
 
 @Component({
@@ -8,18 +11,25 @@ import { PopUpComponent } from 'src/app/shared/components/pop-up/pop-up.componen
   styleUrls: ['./item-table.component.css']
 })
 export class ItemTableComponent {
-  constructor(public dialog:MatDialog) {}
+  constructor(public dialog:MatDialog,private dataStorage:DataStorageService,private productService:ProductService) {}
 
-  openDialogUpdate(): void {
+  @Input() product!:Product;
+
+  openDialogUpdate(id:any): void {
     const dialogRef = this.dialog.open(PopUpComponent);
+    this.dataStorage.id =id;
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
     });
   }
 
-  deleteProductAction():void{
-
+  deleteProductAction(id:any):void{
+    this.productService.deleteProduct(id).subscribe({
+      next:(data:Product)=>{console.log(data);},
+      error:(error)=>{console.log(error);},
+      complete:()=>console.log("complite")
+    })
   }
 
 
