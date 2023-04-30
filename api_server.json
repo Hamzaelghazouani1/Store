@@ -36,8 +36,15 @@
       "postId": 1
     }
   ],
-  "datas":[
-
+  "chart_data":[
+    {
+      "data":[150, 250, 200, 300, 400, 350, 450, 500, 600, 550, 700, 800, 750, 900, 950, 1000],
+      "labels":["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    },
+    {
+      "data":[600, 450, 750, 900, 1200, 1050, 1400, 1600, 1800, 2000, 1750, 2200],
+      "labels":["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    }
   ],
   "users": [{
     "id":1,

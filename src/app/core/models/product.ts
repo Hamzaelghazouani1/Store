@@ -19,3 +19,8 @@ export interface Detail {
   description: string
   value: string
 }
+
+export interface ChartData{
+  data:number[];
+  labels:string[];
+}

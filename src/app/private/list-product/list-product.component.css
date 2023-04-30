@@ -1,0 +1,10 @@
+.container{
+  width: 80vw;
+  height: 100vh;
+}
+
+.table{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}

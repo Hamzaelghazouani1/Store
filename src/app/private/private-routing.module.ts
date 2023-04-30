@@ -1,7 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PrivateComponent } from './private.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { NotFoundComponent } from '../shared/components/not-found/not-found.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:'',component:PrivateComponent,children:[
+    {path:'',loadChildren: () =>
+    import("./dashboard/dashboard.module").then(m => m.DashboardModule)},
+    {path:'product',loadChildren: () =>
+    import("./list-product/list-product.module").then(m => m.ListProductModule)},
+  ]},
+  {path:'**',component:NotFoundComponent,pathMatch:"prefix"}
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

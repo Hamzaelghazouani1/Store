@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product } from '../models/product';
+import { ChartData, Product } from '../models/product';
 import { Observable, map } from 'rxjs';
 import { BASE_URL } from 'src/environments/environment.development';
 
@@ -37,6 +37,10 @@ export class ProductService {
 
   getProductByFilterName(name:string):Observable<Product[]>{
     return this.http.get<Product[]>(`${BASE_URL}/products?name_like=${name}`);
+  }
+
+  getChartData():Observable<ChartData[]>{
+    return this.http.get<ChartData[]>(`${BASE_URL}/chart_data`);
   }
 
 }
