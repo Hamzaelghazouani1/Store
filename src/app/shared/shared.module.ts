@@ -3,6 +3,7 @@ import { MoreTextPipe } from './pipe/more-text.pipe';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
+import { PopUpDeleteComponent } from './components/pop-up-delete/pop-up-delete.component';
 
 
 

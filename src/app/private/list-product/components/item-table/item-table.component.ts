@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { DataStorageService } from 'src/app/core/data/data-storage.service';
 import { Product } from 'src/app/core/models/product';
 import { ProductService } from 'src/app/core/services/product.service';
+import { PopUpDeleteComponent } from 'src/app/shared/components/pop-up-delete/pop-up-delete.component';
 import { PopUpComponent } from 'src/app/shared/components/pop-up/pop-up.component';
 
 @Component({
@@ -11,7 +13,7 @@ import { PopUpComponent } from 'src/app/shared/components/pop-up/pop-up.componen
   styleUrls: ['./item-table.component.css']
 })
 export class ItemTableComponent {
-  constructor(public dialog:MatDialog,private dataStorage:DataStorageService,private productService:ProductService) {}
+  constructor(public dialog:MatDialog,private dataStorage:DataStorageService,private productService:ProductService,private route:Router) {}
 
   @Input() product!:Product;
 
@@ -25,11 +27,15 @@ export class ItemTableComponent {
   }
 
   deleteProductAction(id:any):void{
+    const dialogRef = this.dialog.open(PopUpDeleteComponent,{id:id});
+  }
+
+  deleteAction(id:any):void{
     this.productService.deleteProduct(id).subscribe({
       next:(data:Product)=>{console.log(data);},
       error:(error)=>{console.log(error);},
       complete:()=>console.log("complite")
-    })
+    });
   }
 
 

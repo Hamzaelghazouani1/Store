@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Product } from 'src/app/core/models/product';
 import { ProductService } from 'src/app/core/services/product.service';
@@ -11,6 +11,7 @@ import { PopUpComponent } from 'src/app/shared/components/pop-up/pop-up.componen
 })
 export class ListProductComponent implements OnInit{
   constructor(public dialog:MatDialog,private productService:ProductService) {}
+
 
   ngOnInit(): void {
     this.productService.getAllProducts().subscribe({
